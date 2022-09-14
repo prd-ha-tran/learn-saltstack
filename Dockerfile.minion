@@ -1,0 +1,7 @@
+FROM debian:11-slim
+
+RUN apt update && apt install -y curl
+
+RUN curl -L https://bootstrap.saltproject.io | sh -s -- -X
+
+RUN rm -rf /var/lib/apt/lists/*
